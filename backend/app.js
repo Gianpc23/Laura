@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
 
+//Permite que la app entienda JSON
 app.use(express.json());
 
-app.get('/',(req,res)=>{
-    res.send({hola: "Gian"});
-});
+//Asignar fichero rutas
+app.use('/api',require('./routes'));
 
 module.exports = app;
