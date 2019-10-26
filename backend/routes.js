@@ -19,4 +19,9 @@ router.post('/usuario', async (req,res,next)=>{
     User.create(req.body).then(user => res.json(user)).catch(err => next(err));
 });
 
+router.post('/users', (req,res)=>{
+    console.log("LLega")
+    res.json({valid: false});
+});
+
 module.exports = router;
