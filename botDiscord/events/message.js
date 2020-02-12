@@ -1,13 +1,13 @@
+let opn = require('opn');
+
 const COMMAND_PREFIX = '!';
-module.exports = async (client, message) => {
+
+module.exports = async (_, message) => {
   if(message.content.startsWith(COMMAND_PREFIX)) {
-    const command = message.content.split('!').split(" ")[0];
+    let command = message.content.split('!').split(" ")[0];
     if(command==='build'){
-      var opn = require('opn');
-      const champ = message.content.split('!').split(" ")[1];
-      await opn(`https://app.mobalytics.gg/champions/${champ}/build`);
-      message.reply('Pagina abierta');
+      let champ = message.content.split(" ")[1];
+      opn(`https://app.mobalytics.gg/champions/${champ}/build`);
     }
-    
   }
 }
