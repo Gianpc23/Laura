@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {LoginService} from '../../services/login.service';
 import { User } from 'src/app/models/user';
+import {} from 'discord.js'
+
 
 @Component({
   selector: 'app-login',
@@ -16,6 +18,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.currentUser = new User();
+    //config();
   }
 
   validUser(){
@@ -27,7 +30,11 @@ export class LoginComponent implements OnInit {
         console.log("False");
       }
     });
+  }
 
+  runBot(){
+    //this.bot = new Client;
+    //this.bot.login(process.env.DISCORD_TOKEN);
   }
 
 }
