@@ -1,4 +1,4 @@
-# Registro horario Babel
+# Registro horario
 
 Este proyecto permite levantar una aplicación con Angular para poder rellenar la ocupación de varios días a la vez.
 
