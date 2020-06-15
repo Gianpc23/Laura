@@ -1,0 +1,32 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>User name</mat-label>
+    <input matInput placeholder="" [(ngModel)]="userName" name="userName">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Password</mat-label>
+    <input matInput type="password" [(ngModel)]="password" name="password">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="getSessionToken()">Set Values</button>
+
+</form>
+
+<form class="example-form">
+  <mat-form-field>
+    <mat-label>Start Date</mat-label>
+    <input matInput [matDatepicker]="picker" name="picker" [(ngModel)]="startDate">
+    <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>End Date</mat-label>
+    <input matInput [matDatepicker]="picker1" [(ngModel)]="endDate" name="picker1">
+    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+    <mat-datepicker #picker1></mat-datepicker>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="setDays()">Set Days</button>
+
+</form>

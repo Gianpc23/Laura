@@ -1,0 +1,7 @@
+<mat-card class="example-card" [ngStyle]="{'background-color': isHoliday ? '#ff9999' : '#ffffff'}">
+  <mat-card-header>
+    <mat-card-title>{{dayOfWeek}} {{ day | date:'d/M/yy' }}</mat-card-title>
+    <mat-checkbox class="example-margin" [(ngModel)]="checked" (change)="changeChecked()"
+                  [disabled]="isHoliday"></mat-checkbox>
+  </mat-card-header>
+</mat-card>

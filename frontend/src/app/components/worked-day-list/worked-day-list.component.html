@@ -1,0 +1,8 @@
+<mat-grid-list id="grid" cols="3" rowHeight="2:1">
+  <div *ngIf="availableDates.length !== 0">
+    <mat-grid-tile *ngFor="let day of availableDates">
+        <app-worked-day [day]="day.date" [isHoliday]="isHoliday(day.date)" (updatedWorkedDay)="updateWorkedDay($event)"></app-worked-day>
+    </mat-grid-tile>
+  </div>
+</mat-grid-list>
+
