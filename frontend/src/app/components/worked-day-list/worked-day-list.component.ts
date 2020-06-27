@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HomeService} from "../../services/home.service";
 import {WorkedDay} from "../../models/workedDay";
+import testGian from "../../utils/testPuppeteerService.js";
 
 @Component({
   selector: 'app-worked-day-list',
@@ -42,6 +43,10 @@ export class WorkedDayListComponent implements OnInit {
 
   isHoliday(day: Date){
     return this.homeService.holidays.find(e => e.getTime() == day.getTime());
+  }
+
+  testGian() {
+    testGian();
   }
 
 }

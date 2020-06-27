@@ -24,6 +24,8 @@
     "discord.js": "^11.5.1",
     "dotenv": "^8.2.0",
     "hammerjs": "^2.0.8",
+    "node-fetch": "^2.6.0",
+    "puppeteer": "^4.0.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
