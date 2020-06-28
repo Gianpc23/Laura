@@ -44,4 +44,16 @@ export class WorkedDayListComponent implements OnInit {
     return this.homeService.holidays.find(e => e.getTime() == day.getTime());
   }
 
+  sendDaysToBabel() {
+    let workedDays = this.availableDates.filter(day => day.isChecked);
+    workedDays.forEach(workedDay => {
+      this.homeService.inRequestToBabel(workedDay).subscribe(() => {
+        this.homeService.outRequestToBabel(workedDay).subscribe(() => {
+          console.log("Se han registrado correctamente");
+        });
+      });
+    });
+
+  }
+
 }
